@@ -1,0 +1,48 @@
+int vermelhoCarro = 3;
+int vermelhoPed = 7;
+int verdePed = 6;
+int verdeCarro = 5;
+int amareloCarro = 4;
+int botao = 2;
+void setup ()
+{
+pinMode(vermelhoPed, OUTPUT);
+pinMode(verdePed, OUTPUT);
+pinMode(vermelhoCarro, OUTPUT);
+pinMode(verdeCarro, OUTPUT);
+pinMode(amareloCarro, OUTPUT);
+pinMode(botao, INPUT);
+  
+digitalWrite(amareloCarro, 1);
+delay(1000);
+digitalWrite(amareloCarro, 0);
+delay (1000);
+digitalWrite(amareloCarro, 1);
+delay(1000);
+digitalWrite(amareloCarro, 0);
+delay(1000);
+digitalWrite(amareloCarro, 1);
+delay(1000);
+digitalWrite(amareloCarro, 0);
+}
+  
+void loop ()
+{
+
+  if(digitalRead(botao) == 1){
+digitalWrite(vermelhoPed, 0);
+digitalWrite(amareloCarro, 0);
+digitalWrite(vermelhoCarro, 1);
+digitalWrite(verdePed, 1);
+delay(5000);
+digitalWrite(verdePed, 0);
+digitalWrite(vermelhoPed, 1);
+digitalWrite(vermelhoCarro, 0);
+digitalWrite(verdeCarro, 1);
+delay(2000);
+digitalWrite(amareloCarro, 1);
+digitalWrite(vermelhoPed, 0);
+digitalWrite(vermelhoPed, 1);
+digitalWrite(vermelhoCarro, 0);
+digitalWrite(verdeCarro, 0);
+delay(2000); 
